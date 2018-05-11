@@ -17,6 +17,12 @@ public class LinkedListDemo1 {
 		System.out.println("Search for number 15 found: " + list.find(15));
 		System.out.println(list);
 		System.out.println("Length: " + list.length());
+		list.addAtEnd(22);
+		list.addAtEnd(100);
+		System.out.println("after adding at the end: " + list);
+		int val = 5;
+		list.deleteWithValue(val);
+		System.out.println("deleted number: " + val + " from list results: " + list);
 		
 	}
 }

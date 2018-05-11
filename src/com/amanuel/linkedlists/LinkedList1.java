@@ -9,6 +9,17 @@ public class LinkedList1 {
 		newNode.setNextNode(this.head);
 		this.head = newNode;
 	}
+	// Insert at the end of the Node
+	public void addAtEnd(int data){
+        if(this.head == null) {
+        		return;
+        }
+        Node1 current = this.head;
+        while(current.getNextNode() != null) {
+        		current = current.getNextNode();
+        }
+        current.setNextNode(new Node1(data));
+    }
 	// Finding the length of the Node
 	public int length() {
 		int length = 0;
@@ -23,6 +34,23 @@ public class LinkedList1 {
 	// Deleting from the head of the node
 	public void deleteFromHead() {
 		this.head = this.head.getNextNode();
+	}
+	// Deleting with value
+	public void deleteWithValue(int data) {
+		if(this.head == null) {
+			return;
+		}
+		if(this.head.getData() == data) {
+			this.head = this.head.getNextNode();
+			return;
+		}
+		Node1 current = this.head;
+		while(current.getNextNode() != null) {
+			if(current.getNextNode().getData() == data) {
+				current.setNextNode(current.getNextNode().getNextNode());
+			}
+			current = current.getNextNode();
+		}
 	}
 	
 	// Searching for a Node
