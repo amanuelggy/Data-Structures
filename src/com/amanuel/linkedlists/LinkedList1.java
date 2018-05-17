@@ -12,7 +12,7 @@ public class LinkedList1 {
 	// Insert at the end of the Node
 	public void addAtEnd(int data){
         if(this.head == null) {
-        		return;
+        		head = new Node1(data);
         }
         Node1 current = this.head;
         while(current.getNextNode() != null) {
